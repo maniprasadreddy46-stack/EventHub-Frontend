@@ -23,7 +23,7 @@ function Register({ onLogin }) {
 
     try {
       await axios.post(
-        "http://localhost:8080/api/users/register",
+        "https://eventhub-backend-1-2ucy.onrender.com/api/users/register",
         formData
       );
 

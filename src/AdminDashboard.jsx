@@ -25,14 +25,14 @@ function AdminDashboard({ onHome }) {
   const loadData = async () => {
     try {
       const eventsResponse = await axios.get(
-        "http://localhost:8080/api/events"
+        "https://eventhub-backend-1-2ucy.onrender.com/api/events"
       );
 
       setEvents(eventsResponse.data);
 
       try {
         const registrationsResponse = await axios.get(
-          "http://localhost:8080/api/registrations"
+          "https://eventhub-backend-1-2ucy.onrender.com/api/registrations"
         );
 
         setRegistrations(registrationsResponse.data);
@@ -63,7 +63,7 @@ function AdminDashboard({ onHome }) {
 
     try {
       await axios.post(
-        "http://localhost:8080/api/events",
+        "https://eventhub-backend-1-2ucy.onrender.com/api/events",
         newEvent
       );
 
@@ -103,7 +103,7 @@ function AdminDashboard({ onHome }) {
 
     try {
       await axios.delete(
-        `http://localhost:8080/api/events/${id}`
+        `https://eventhub-backend-1-2ucy.onrender.com/api/events/${id}`
       );
 
       alert("Event deleted successfully!");

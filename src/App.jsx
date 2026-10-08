@@ -29,7 +29,7 @@ function App() {
   const loadEvents = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/events"
+        "https://eventhub-backend-1-2ucy.onrender.com/api/events"
       );
 
       setEvents(response.data);
@@ -78,7 +78,7 @@ function App() {
 
     try {
       await axios.post(
-        `http://localhost:8080/api/registrations/event/${selectedEvent.id}`,
+        `https://eventhub-backend-1-2ucy.onrender.com/api/registrations/event/${selectedEvent.id}`,
         formData
       );
 
